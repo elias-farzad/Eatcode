@@ -1,3 +1,11 @@
+# Eatcode
+
+Leetcode but with a helper!
+
+To Run:
+
+clone repo, npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
