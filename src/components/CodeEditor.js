@@ -1,18 +1,26 @@
-// src/components/CodeEditor.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
+import CodeMirror from '@uiw/react-codemirror';
+import { python } from '@codemirror/lang-python';
 
 function CodeEditor() {
+  const [code, setCode] = useState('# Write your Python code here...');
+
+  const handleChange = (value) => {
+    setCode(value);
+  };
+
   return (
-    <Box p={2} height="100%">
-      <Typography variant="h6">Code Editor</Typography>
-      {/* Integrate CodeMirror here */}
-      <div style={{ height: '90%', backgroundColor: '#f5f5f5', marginTop: '10px' }}>
-        {/* Placeholder for Code Editor */}
-        <p style={{ textAlign: 'center', paddingTop: '40px', color: '#999' }}>
-          Code Editor Coming Soon
-        </p>
-      </div>
+    <Box p={2} height="100%" width="100%">
+      <Typography variant="h6">Python Code Editor</Typography>
+      <CodeMirror
+        value={code}
+        height="400px"
+        extensions={[python()]}
+        onChange={(value) => handleChange(value)}
+        theme="light"
+        style={{ marginTop: '10px', backgroundColor: '#f5f5f5' }}
+      />
     </Box>
   );
 }
