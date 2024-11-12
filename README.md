@@ -4,7 +4,7 @@ Leetcode but with a helper!
 
 To Run:
 
-clone repo, npm start
+clone repo, npm i, npm start
 
 # Getting Started with Create React App
 
